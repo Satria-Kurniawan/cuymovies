@@ -22,14 +22,11 @@
       <p class="md:text-xl text-xs">{{ movie.overview }}</p>
     </div>
 
-    <div
-      v-show="openTrailer"
-      class="absolute w-full md:top-28 top-24 drop-shadow-2xl"
-    >
+    <div v-show="openTrailer">
       <youtube
         :video-id="trailer.key !== undefined ? trailer.key : ''"
         ref="youtube"
-        class="md:max-w-none max-w-sm md:max-h-fit max-h-60 left-0 right-0 mx-auto"
+        class="absolute md:top-28 top-24 drop-shadow-2xl md:max-w-none max-w-sm md:max-h-fit max-h-60 left-0 right-0 mx-auto"
       ></youtube>
     </div>
   </div>
